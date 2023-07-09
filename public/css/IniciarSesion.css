@@ -1,0 +1,129 @@
+
+.center {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    margin: 150px auto;
+    transition: translate(-50%, -50%);
+    width: 400px;
+    background-color: #1a1c20;
+    border-radius: 10px;
+}
+
+.center h2 {
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+.center form {
+    padding: 0 40px;
+}
+
+form .campo {
+    position: relative;
+    border-bottom: 2px solid #fff;
+    margin: 30px 0;
+}
+
+.campo input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    caret-color: #fff;
+    color: #fff;
+}
+
+.campo label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #fff;
+    transform: translateY(-50%);
+    font-size: 16px;
+    transition: .5s;
+    pointer-events: none;
+}
+
+.campo span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #ffff;
+    transition: .5s;
+}
+
+.campo input:focus ~ label,
+.campo input:valid ~ label {
+    top: -5px;
+    color: #1cb698;
+}
+
+.campo input:focus ~ label::before,
+.campo input:valid ~ label::before {
+    width: 100%;
+}
+
+.ojo_mostrar {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    opacity: 0.3;
+}
+
+.ojo_mostrar:hover {
+    opacity: 0.8;
+}
+
+.iniciar_sesion {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: #1cb698;
+    color: #fff;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 700;
+    outline: none;
+    margin-bottom: 1.5rem;
+}
+
+.iniciar_sesion:hover {
+    background-color: rgba(28, 182, 152, 0.5);
+}
+
+.link_registro {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+
+.link_registro:hover {
+    color: #0fbea8;
+}
+
+.mostrar_error {
+    position: relative;
+    width: auto;
+    margin: 20px auto;
+    list-style: none;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #f80000;
+}
+
+.bi-exclamation-circle-fill {
+    color: #ecab0f; 
+}
